@@ -332,3 +332,89 @@ header{
     width: 100%;
     transform: translateX(-5%);
 }
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.sessao_projetos .card{
+    position: relative;
+    width: 18rem;
+    height: 25rem;
+}
+
+.card_img_wrapper{
+    border-top: .5rem solid #FFD200;
+    box-shadow: .1rem .1rem 3px #000;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card_img_wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .1rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card_img_wrapper img{
+    opacity: .4;
+}
+
+.card_info{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: .3rem .2rem .3rem rgba(0, 0, 0, .4);
+    transition: all .3s;
+}
+
+.card_info h2{
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card_info h3{
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: #f1c40f;
+    margin-bottom: 1.5rem;
+}
+
+.card_info p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card_info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.card:hover .card_info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
