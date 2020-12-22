@@ -15,12 +15,16 @@
     --font-action: "Muli", serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .hamburguer{
     /*background-color: tomato;*/
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 9999;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -189,6 +193,7 @@ header{
     top: 0;
     right: -20rem;  
     transition: all 1s;
+    z-index: 999;
 }
 
 .show-menu .sidebar{
@@ -333,6 +338,11 @@ header{
     transform: translateX(-5%);
 }
 
+.sessao_projetos{
+    width: 100%;
+    height: 100vh;
+}
+
 .projetos{
     display: flex;
     justify-content: space-evenly;
@@ -343,7 +353,7 @@ section.sessao_projetos .card{
     position: relative;
     width: 18rem;
     height: 25rem;
-    margin: 1rem 0;
+    z-index: 0;
 }
 
 .card_img_wrapper{
@@ -426,10 +436,11 @@ section.sessao_projetos .card{
 .sessao_contato{
     width: 100%;
     height: 100vh;
-    background-color: #272727;
+    background-color: #17181b;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 .contato_wrapper{
     height: 30rem;
@@ -519,7 +530,7 @@ section.sessao_projetos .card{
     width: 100%;
     height: 100vh;
     background-color: black;
-    background-image: linear-gradient(to bottom,rgba(0,0,0, .8), rgba(0,0,0,.4)), url(../_images/bg-orcamento3.jpg);
+    background-image: linear-gradient(to bottom,#27272799, rgba(0,0,0,.4)), url(../_images/bg-orcamento3.jpg);
     background-position: right;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -576,9 +587,192 @@ section.sessao_projetos .card{
     padding: .3rem;
 }
 
+/* to hide */
+
+.sessao_orcamento input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+.sessao_orcamento input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+  
+.sessao_orcamento input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.sessao_orcamento input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+
+/* to hide */
+
+/* Special styling for WebKit/Blink */
+.sessao_orcamento input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 2.2rem;
+    width: 1rem;
+    border-radius: 3px;
+    background-color:#F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+  
+  /* All the same stuff for Firefox */
+  .sessao_orcamento input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 2.2rem;
+    width: 1rem;
+    border-radius: 3px;
+    background-color:#F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+}
+  
+  /* All the same stuff for IE */
+  .sessao_orcamento input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 2.2rem;
+    width: 1rem;
+    border-radius: 3px;
+    background-color:#F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+}
+
+/* Special styling for WebKit/Blink */
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #ccc;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+
+}
+  
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+
+}
+  
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #ccc;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+
+}
+  
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+
+}
+input[type=range]::-ms-fill-lower {
+    background: #ccc;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #ccc;
+
+}
+input[type=range]::-ms-fill-upper {
+    background: #ccc;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+
+}
+
 .sessao_orcamento button{
     text-transform: uppercase;
     cursor: pointer;
     padding: 1rem;
     grid-column: 2;
+}
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social_list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social_list ul{
+    display: flex;
+}
+
+#link_top{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width:  3rem;
+    height: 3rem;
+    background-color:#F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000090;
+    transition: all .5s ease-in-out;
+}
+
+.show-menu #link_top{
+    display: none;
 }

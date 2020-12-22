@@ -20,7 +20,7 @@
             <span>fechar</span>
         </div>
 
-        <header>
+        <header id="home">
             <div class="img_wraper">
                 <img src="../_images/bg.jpg" alt="" >
             </div><!--img_wraper-->
@@ -34,11 +34,11 @@
         <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu_item"><a href="" class="menu_link">Home</a></li>
-                    <li class="menu_item"><a href="" class="menu_link">Conhecimentos</a></li>
-                    <li class="menu_item"><a href="" class="menu_link">Projetos</a></li>
-                    <li class="menu_item"><a href="" class="menu_link">Contato</a></li>
-                    <li class="menu_item"><a href="" class="menu_link">Orçamento</a></li>
+                    <li class="menu_item"><a href="#home" class="menu_link">Home</a></li>
+                    <li class="menu_item"><a href="#conhecimento" class="menu_link">Conhecimentos</a></li>
+                    <li class="menu_item"><a href="#projetos" class="menu_link">Projetos</a></li>
+                    <li class="menu_item"><a href="#contato" class="menu_link">Contato</a></li>
+                    <li class="menu_item"><a href="#orcamento" class="menu_link">Orçamento</a></li>
                 </ul><!--menu-->
             </nav>
             <div class="social_media">
@@ -47,7 +47,7 @@
                 <a href="#"><i class="fab fa-twitter-square"></i></a>
             </div>
         </aside><!--sidebar-->
-        <section class="sessao_conhecimento">
+        <section class="sessao_conhecimento" id="conhecimento">
             <div class="sessao_header">
                 <h1>Conhecimentos</h1>
             </div>
@@ -111,7 +111,7 @@
                 </div>
             </div><!--conhecimentos-->
         </section>
-        <section class="sessao_projetos">
+        <section class="sessao_projetos" id="projetos">
             <div class="sessao_header">
                 <h1>Projetos</h1>
             </div>
@@ -153,7 +153,7 @@
 
         </section><!--sessao_projetos-->
         
-        <section class="sessao_contato">
+        <section class="sessao_contato" id="contato">
             <div class="contato_wrapper">
                 <div class="contato_left"></div><!--contato_left-->
                 <div class="contato_right">
@@ -177,7 +177,7 @@
             </div>
         </section><!--sessao_contato-->
 
-        <section class="sessao_orcamento">
+        <section class="sessao_orcamento" id="orcamento">
             <div class="orcamento_wrapper">
                 <h1>Faça um orçamento</h1>
                 <form>
@@ -203,7 +203,20 @@
                 </form>
             </div><!--orcamento_wrapper-->
         </section><!--sessao_orçamento-->
-
+        <footer>
+            <div class="footer_content">
+                <p>Copyright &copy; 2020, ETECIA DS - Todos os direitos reservados
+                </p>
+                <div class="social_list">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <a href="#home" id="link_top"><i class="fas fa-arrow-up"></i></a>
     </div><!--container-->
 </body>
 <script src="./script.js"></script>
