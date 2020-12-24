@@ -347,6 +347,8 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 20%;
+    transform: translateY(-50%);
 }
 
 section.sessao_projetos .card{
@@ -540,10 +542,13 @@ section.sessao_projetos .card{
 }
 
 .orcamento_wrapper{
-    width: 60%;
+    width: 50%;
+    max-width: 42rem;
     height: 80%;
+    max-height: 30rem;
+    border-radius: 1rem;
     background-color: #ffffff99;
-    box-shadow: 0 0.1rem 0.3rem rgba(15,15,15, .5);
+    box-shadow: 0 0.5rem 0.5rem rgba(15,15,15, .5);
     position: relative;
 }
 
@@ -572,9 +577,10 @@ section.sessao_projetos .card{
 }
 
 .sessao_orcamento label{
-    font-family: var(--font-secundary);
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: -.5rem;
 }
 
 .sessao_orcamento input[type=number]{
@@ -716,6 +722,7 @@ input[type=range]:focus::-ms-fill-upper {
     background: #ccc;
 
 }
+/* Special styling for WebKit/Blink */
 
 .sessao_orcamento button{
     text-transform: uppercase;
